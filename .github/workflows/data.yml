@@ -19,8 +19,10 @@ jobs:
         python-version:
           - '3.8'
         browser:
-          - 'edge'
+          #          - 'edge'
           - 'google'
+          - 'opera'
+          - 'firefox'
 
     steps:
       - name: Get system version for Linux
@@ -67,6 +69,7 @@ jobs:
         uses: nick-fields/retry@v2
         env:
           CI: 'true'
+          GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           shell: bash
           timeout_minutes: 180
