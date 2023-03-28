@@ -14,7 +14,7 @@ def _version_split(v):
         version_text = matching.group('version')
         return tuple(map(int, version_text.split('.')))
     else:
-        raise ValueError(f'Invalid version for opera release - {v!r}.')
+        raise ValueError(f'Invalid version for firefox release - {v!r}.')
 
 
 def get_file_list():

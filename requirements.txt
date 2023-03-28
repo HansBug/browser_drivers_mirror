@@ -2,3 +2,4 @@ requests[socks]
 click>=8
 tqdm
 PyGithub
+huggingface_hub

@@ -19,7 +19,7 @@ jobs:
         python-version:
           - '3.8'
         browser:
-          #          - 'edge'
+          - 'edge'
           - 'google'
           - 'opera'
           - 'firefox'
@@ -70,63 +70,11 @@ jobs:
         env:
           CI: 'true'
           GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_HANSBUG_TOKEN }}
         with:
           shell: bash
           timeout_minutes: 180
           max_attempts: 5
           retry_on: any
           command: |
-            python -m mirror.${{ matrix.browser }} download -O ./${{ matrix.browser }} && \
-              tree ./${{ matrix.browser }}
-      - name: Transform models to onnx format
-        run: |
-          ls -al ./${{ matrix.browser }}
-          zip -r ${{ matrix.browser }}.zip ${{ matrix.browser }}
-      - name: Upload the character databases
-        uses: actions/upload-artifact@v3
-        with:
-          name: downloaded_drivers
-          path: ${{ matrix.browser }}.zip
-
-  data_upload:
-    name: Data Upload
-    runs-on: ${{ matrix.os }}
-    needs:
-      - data_crawl
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - 'ubuntu-latest'
-        python-version:
-          - '3.8'
-
-    steps:
-      - name: Prepare the repository
-        shell: bash
-        run: |
-          sudo apt-get install -y tree
-          git lfs install
-          git clone https://huggingface.co/HansBug/browser_drivers_mirror
-          ls -al browser_drivers_mirror
-      - name: Download from artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: downloaded_drivers
-          path: browser_drivers_mirror
-      - name: See what is in this path
-        shell: bash
-        run: |
-          cd browser_drivers_mirror
-          for zfile in *.zip; do unzip -o $zfile && rm $zfile; done
-          tree .
-      - name: Push data to hugging face repository
-        env:
-          HF_TOKEN: ${{ secrets.HF_HANSBUG_TOKEN }}
-        run: |
-          cd browser_drivers_mirror
-          git config user.name 'hansbug'
-          git config user.email 'hansbug@buaa.edu.cn'
-          git add -A
-          git diff-index --quiet HEAD || git commit -a -m "dev(hansbug): mirror sync $(date -R)"
-          git push https://hansbug:$HF_TOKEN@huggingface.co/HansBug/browser_drivers_mirror main
+            python -m mirror.${{ matrix.browser }} trans

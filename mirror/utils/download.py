@@ -1,7 +1,7 @@
 import os
 
 import requests
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 
 def file_download(url, filename, expected_size: int = None):
