@@ -20,6 +20,7 @@ def file_download(url, filename, expected_size: int = None):
 
     if expected_size is not None and os.path.getsize(filename) != expected_size:
         # os.remove(filename)
-        raise requests.exceptions.HTTPError(f"Downloaded file is not of expected size: {expected_size}")
+        raise requests.exceptions.HTTPError(f"Downloaded file is not of expected size, "
+                                            f"{expected_size} expected but {os.path.getsize(filename)} found.")
 
     return filename
