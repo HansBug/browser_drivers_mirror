@@ -74,7 +74,7 @@ jobs:
           retry_on: any
           command: |
             python -m mirror.${{ matrix.browser }} download -O ./${{ matrix.browser }} && \
-              tree ./browser_drivers_mirror
+              tree ./${{ matrix.browser }}
       - name: Transform models to onnx format
         run: |
           ls -al ./${{ matrix.browser }}
