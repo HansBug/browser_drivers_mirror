@@ -19,7 +19,7 @@ jobs:
         python-version:
           - '3.8'
         browser:
-          #          - 'edge'
+          - 'edge'
           - 'google'
 
     steps:
@@ -115,8 +115,7 @@ jobs:
         shell: bash
         run: |
           cd browser_drivers_mirror
-          for zfile in *.zip; do unzip -o $zfile; done
-          rm -rf *.zip
+          for zfile in *.zip; do unzip -o $zfile && rm $zfile; done
           tree .
       - name: Push data to hugging face repository
         env:
