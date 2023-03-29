@@ -8,11 +8,11 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 ## Currently supported browsers
 
 * [Google Chrome](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google) (up
-  to [111.0.5563.64](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/111.0.5563.64))
+  to [${GOOGLE_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/${GOOGLE_LATEST_RELEASE}))
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
-  to [111.0.1661.54](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/111.0.1661.54))
+  to [${EDGE_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/${EDGE_LATEST_RELEASE}))
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
-  to [v0.32.2](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.32.2))
+  to [${FIREFOX_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/${FIREFOX_LATEST_RELEASE}))
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
-  to [v.111.0.5563.65](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/v.111.0.5563.65))
+  to [${OPERA_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/${OPERA_LATEST_RELEASE}))
 

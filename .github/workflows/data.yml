@@ -21,7 +21,7 @@ jobs:
         python-version:
           - '3.8'
         browser:
-          - 'edge'
+          #          - 'edge'
           - 'google'
           - 'opera'
           - 'firefox'
@@ -107,3 +107,78 @@ jobs:
           label: Data Updated
           message: ${{ env.UPDATE_DATE }}
           color: yellowgreen
+
+  update_github_readme:
+    name: Main Sync
+    runs-on: ${{ matrix.os }}
+    needs:
+      - data_crawl
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - 'ubuntu-latest'
+        python-version:
+          - '3.7'
+
+    steps:
+      - name: Get system version for Linux
+        if: ${{ contains(matrix.os, 'ubuntu') }}
+        shell: bash
+        run: |
+          echo "OS_NAME=Linux" >> $GITHUB_ENV
+          echo "IS_WIN=" >> $GITHUB_ENV
+          echo "IS_MAC=" >> $GITHUB_ENV
+      - name: Set environment for Cpython
+        if: ${{ !contains(matrix.python-version, 'pypy') }}
+        shell: bash
+        run: |
+          echo "IS_PYPY=" >> $GITHUB_ENV
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 20
+          submodules: 'recursive'
+      - name: Set up system dependences on Linux
+        if: ${{ env.OS_NAME == 'Linux' }}
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tree cloc wget curl make zip
+      - name: Set up python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade flake8 setuptools wheel twine
+          pip install -r requirements.txt
+      - name: Test the basic environment
+        shell: bash
+        run: |
+          python -V
+          pip --version
+          pip list
+          tree .
+      - name: Creating ranklist of ${{ matrix.game }} [${{ matrix.mode }}]
+        uses: nick-fields/retry@v2
+        with:
+          shell: bash
+          timeout_minutes: 20
+          max_attempts: 3
+          retry_on: error
+          command: |
+            python -m mirror readme
+      - name: Change Commit
+        id: commit
+        run: |
+          git config user.name 'hansbug'
+          git config user.email 'hansbug@buaa.edu.cn'
+          git add -A
+          git diff-index --quiet HEAD || git commit -a -m "dev(hansbug): auto sync $(date -R)"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

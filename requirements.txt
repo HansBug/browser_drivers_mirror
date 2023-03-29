@@ -3,3 +3,4 @@ click>=8
 tqdm
 PyGithub
 huggingface_hub
+hbutils>=0.8.2
