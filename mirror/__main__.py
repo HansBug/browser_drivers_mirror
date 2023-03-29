@@ -31,7 +31,7 @@ def _get_latest_release_version(b) -> str:
         return resp.text.strip()
 
 
-_UNKNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera']
+_UNKNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera', 'ie']
 
 
 @cli.command('readme', help='Regenerate README.md.',

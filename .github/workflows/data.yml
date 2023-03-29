@@ -23,6 +23,7 @@ jobs:
         browser:
           - 'edge'
           - 'google'
+          - 'ie'
           - 'opera'
           - 'firefox'
 

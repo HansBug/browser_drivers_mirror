@@ -15,4 +15,5 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
   to [${FIREFOX_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/${FIREFOX_LATEST_RELEASE}))
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
   to [${OPERA_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/${OPERA_LATEST_RELEASE}))
-
+* [IE (not recommended)](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie) (up
+  to [${IE_LATEST_RELEASE}](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/${IE_LATEST_RELEASE}))
