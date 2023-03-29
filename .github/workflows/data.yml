@@ -6,6 +6,8 @@ permissions:
 on:
   push:
   workflow_dispatch:
+  schedule:
+    - cron: '30 16 * * *'
 
 jobs:
   data_crawl:
@@ -78,3 +80,30 @@ jobs:
           retry_on: any
           command: |
             python -m mirror.${{ matrix.browser }} trans
+
+  badge_create:
+    name: Badge Create
+    runs-on: ${{ matrix.os }}
+    needs:
+      - data_crawl
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - 'ubuntu-latest'
+        python-version:
+          - '3.8'
+
+    steps:
+      - name: Get the Timestamp
+        run: |
+          echo "UPDATE_DATE=$(date +'%Y-%m-%d %H:%M %Z')" >> $GITHUB_ENV
+      - name: Create Update Time Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: ${{ secrets.BADGE_GIST_ID }}
+          filename: data_last_update.json
+          label: Data Updated
+          message: ${{ env.UPDATE_DATE }}
+          color: yellowgreen
