@@ -15,4 +15,5 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
   to [v0.32.2](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.32.2))
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
   to [v.111.0.5563.65](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/v.111.0.5563.65))
-
+* [IE (not recommended)](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie) (up
+  to [selenium-4.8.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.8.0))
