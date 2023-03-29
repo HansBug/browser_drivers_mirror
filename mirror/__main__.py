@@ -8,7 +8,7 @@ from hbutils.string import env_template
 from huggingface_hub import hf_hub_url
 from tqdm.auto import tqdm
 
-from .utils import GLOBAL_CONTEXT_SETTINGS
+from .utils import GLOBAL_CONTEXT_SETTINGS, get_huggingface_client
 from .utils import print_version as _origin_print_version
 
 print_version = partial(_origin_print_version, 'mirror')
@@ -65,6 +65,30 @@ def readme(template_filename: str, output: str, is_huggingface: bool, scheme_tem
             f.write(scheme_text)
             f.write(os.linesep)
         f.write(readme_text)
+
+
+@cli.command('hf_readme', help='Regenerate README.md for huggingface, and then upload it.',
+             context_settings={**GLOBAL_CONTEXT_SETTINGS})
+@click.option('--input', '-i', 'readme_filename', type=click.Path(exists=True, file_okay=True, readable=True),
+              required=True, help='README.md file to upload.', show_default=True)
+@click.option('--repo', '-r', 'repo', type=str, default='HansBug/browser_drivers_mirror',
+              help='Repository to upload.', show_default=True)
+@click.option('--remote', '-R', 'remote_filename', type=str, default='README.md',
+              help='README.md file in repository.', show_default=True)
+def hf_readme(readme_filename: str, repo: str, remote_filename: str):
+    resp = requests.get(hf_hub_url(repo_id=repo, filename=remote_filename))
+    resp.raise_for_status()
+
+    remote_readme_text = resp.text
+    local_readme_text = pathlib.Path(readme_filename).read_text()
+    if remote_readme_text != local_readme_text:
+        api = get_huggingface_client()
+        api.upload_file(
+            path_or_fileobj=readme_filename,
+            path_in_repo=remote_filename,
+            repo_id=repo,
+            repo_type='model',
+        )
 
 
 if __name__ == '__main__':
