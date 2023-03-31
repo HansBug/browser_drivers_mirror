@@ -3,6 +3,7 @@ import tempfile
 from functools import partial
 
 import click
+from huggingface_hub import hf_hub_url
 from tqdm.auto import tqdm
 
 from .index import get_file_list, GOOGLE_DRIVE_ROOT
@@ -66,6 +67,31 @@ def trans(repo: str, namespace: str):
             repo_id=repo,
             repo_type='model',
         )
+
+
+@cli.command('index', help='Index all files on google\'s official driver page.',
+             context_settings={**GLOBAL_CONTEXT_SETTINGS})
+@click.option('--repo', '-r', 'repo', type=str, default='HansBug/browser_drivers_mirror',
+              help='Repository to upload.', show_default=True)
+@click.option('--namespace', '-n', 'namespace', type=str, default='google',
+              help="Namespace to upload.", show_default=True)
+@click.option('--output_dir', '-O', 'output_dir', type=click.Path(file_okay=False), required=True,
+              help='Output directory of all models.', show_default=True)
+def index(repo: str, namespace: str, output_dir: str):
+    click.echo(click.style(f'Getting index from {GOOGLE_DRIVE_ROOT!r} ...'))
+    os.makedirs(output_dir, exist_ok=True)
+    for url, filename, filesize in tqdm(get_file_list()):
+        _directory, _ = os.path.split(filename)
+        index_filename = os.path.join(output_dir, filename)
+        _index_dir, _ = os.path.split(index_filename)
+        if _index_dir:
+            os.makedirs(_index_dir, exist_ok=True)
+
+        if _directory:
+            with open(index_filename, 'w') as f:
+                f.write(hf_hub_url(repo, f'{namespace}/{filename}', repo_type='model'))
+        else:
+            file_download(url, index_filename, filesize)
 
 
 if __name__ == '__main__':
