@@ -87,6 +87,7 @@ def index(repo: str, namespace: str, output_dir: str):
             os.makedirs(_index_dir, exist_ok=True)
 
         if _directory:
+            index_filename = f'{index_filename}_index'
             with open(index_filename, 'w') as f:
                 f.write(hf_hub_url(repo, f'{namespace}/{filename}', repo_type='model'))
         else:
