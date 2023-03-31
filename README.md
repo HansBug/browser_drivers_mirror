@@ -10,7 +10,7 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 * [Google Chrome](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google) (up
   to [111.0.5563.64](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/111.0.5563.64))
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
-  to [111.0.1661.54](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/111.0.1661.54))
+  to [111.0.1661.62](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/111.0.1661.62))
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
   to [v0.32.2](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.32.2))
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
