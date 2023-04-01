@@ -13,6 +13,13 @@ from ..utils import print_version as _origin_print_version
 print_version = partial(_origin_print_version, 'mirror.edge')
 
 
+def _latest_preprocess(file):
+    with open(file, 'rb') as f:
+        binary = f.read()
+    with open(file, 'w') as f:
+        f.write(binary.decode('utf-16').strip())
+
+
 @click.group(context_settings={**GLOBAL_CONTEXT_SETTINGS})
 @click.option('-v', '--version', is_flag=True,
               callback=print_version, expose_value=False, is_eager=True,
@@ -59,6 +66,8 @@ def trans(repo: str, namespace: str):
             else:
                 local_filename = os.path.join(root_td, os.path.basename(url))
                 file_download(url, local_filename, filesize)
+                if os.path.basename(local_filename).startswith('LATEST_'):
+                    _latest_preprocess(local_filename)
 
         api.upload_folder(
             folder_path=root_td,
@@ -92,6 +101,8 @@ def index(repo: str, namespace: str, output_dir: str):
                 f.write(hf_hub_url(repo, f'{namespace}/{filename}', repo_type='model'))
         else:
             file_download(url, index_filename, filesize)
+            if os.path.basename(index_filename).startswith('LATEST_'):
+                _latest_preprocess(index_filename)
 
 
 if __name__ == '__main__':
