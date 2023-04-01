@@ -1,12 +1,16 @@
+import logging
 import os
 import pathlib
 from functools import partial
+from unittest.mock import patch
 
 import click
 import requests
 from hbutils.string import env_template
 from huggingface_hub import hf_hub_url
 from tqdm.auto import tqdm
+from webdriver_manager.core.utils import os_type
+from webdriver_manager.dispatch import get_browser_manager
 
 from .utils import GLOBAL_CONTEXT_SETTINGS, get_huggingface_client
 from .utils import print_version as _origin_print_version
@@ -34,6 +38,55 @@ def cli():
 _UNKNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera', 'ie']
 
 
+def _get_envs_of_release_urls():
+    url_records = {}
+    items = []
+    for os_ in ['linux', 'darwin', 'win32']:
+        for bits in [32, 64]:
+            for is_arch in [True, False]:
+                for browser_name in _UNKNOWN_BROWSERS:
+                    if browser_name == 'ie' and os_ != 'win32':
+                        continue
+                    if os_ != 'win32' and bits == 32:
+                        continue
+                    if browser_name == 'chrome' and bits == 32:
+                        continue
+                    if is_arch and (os_ != 'darwin' or browser_name not in ['chrome', 'firefox']):
+                        continue
+
+                    items.append((os_, bits, is_arch, browser_name))
+
+    for os_, bits, is_arch, browser_name in tqdm(items):
+        with patch('sys.platform', os_), patch('platform.machine', lambda: f'{bits}'), \
+                patch('platform.processor', lambda: 'i386' if not is_arch else 'x86_64'):
+            driver = get_browser_manager(browser_name)
+            try:
+                name = f'{browser_name}_{os_type()}'
+                if is_arch:
+                    name = f'{name}_arch'
+                name = f'{name}_url'.upper()
+                url_records[name] = driver.driver_url
+            except ValueError:
+                logging.warning(f'No driver found for {browser_name} on {os_type()}.')
+
+    return url_records
+
+
+def _get_envs_of_versions():
+    envs = {}
+    for browser in tqdm(_UNKNOWN_BROWSERS):
+        envs[f'{browser.upper()}_LATEST_RELEASE'] = _get_latest_release_version(browser)
+    return envs
+
+
+def _get_envs_for_render():
+    return {
+        **os.environ,
+        **_get_envs_of_versions(),
+        **_get_envs_of_release_urls()
+    }
+
+
 @cli.command('readme', help='Regenerate README.md.',
              context_settings={**GLOBAL_CONTEXT_SETTINGS})
 @click.option('--template', '-t', 'template_filename', type=click.Path(exists=True, dir_okay=False, readable=True),
@@ -47,11 +100,7 @@ _UNKNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera', 'ie']
               default='README_scheme.template.md', help='Scheme template file of README.md (required on huggingface)',
               show_default=True)
 def readme(template_filename: str, output: str, is_huggingface: bool, scheme_template_filename: str):
-    envs = {}
-    for browser in tqdm(_UNKNOWN_BROWSERS):
-        envs[f'{browser.upper()}_LATEST_RELEASE'] = _get_latest_release_version(browser)
-    envs = {**os.environ, **envs}
-
+    envs = _get_envs_for_render()
     if is_huggingface:
         scheme_template = pathlib.Path(scheme_template_filename).read_text()
         scheme_text = env_template(scheme_template, environ=envs, safe=True, default='')
