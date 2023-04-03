@@ -19,12 +19,12 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_win64.zip)
     * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_win32.zip)
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
-  to [v0.32.2](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.32.2))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-linux64.tar.gz)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-macos.tar.gz)
-    * [macOS (arch) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-macos-aarch64.tar.gz)
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-win64.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-win32.zip)
+  to [v0.33.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.33.0))
+    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
+    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz)
+    * [macOS (arch) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz)
+    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip)
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
   to [v.111.0.5563.65](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/v.111.0.5563.65))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.111.0.5563.65/operadriver_linux64.zip)
@@ -61,15 +61,15 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/LATEST_RELEASE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-linux64.tar.gz'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-macos.tar.gz'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz'
 # download for macos (arch)
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-macos-aarch64.tar.gz'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz'
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-win64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.32.2/geckodriver-v0.32.2-win32.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip'
 ```
 
 * Opera
