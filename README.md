@@ -8,10 +8,10 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 ## Supported Browsers
 
 * [Google Chrome](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google) (up
-  to [111.0.5563.64](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/111.0.5563.64))
+  to [112.0.5615.49](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/112.0.5615.49))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_mac64.zip)
-    * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_win32.zip)
+    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_mac64.zip)
+    * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_win32.zip)
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
   to [111.0.1661.62](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/111.0.1661.62))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_linux64.zip)
@@ -49,9 +49,9 @@ wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/go
 # download for linux
 wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_mac64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_mac64.zip'
 # download for windows
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/111.0.5563.64/chromedriver_win32.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_win32.zip'
 ```
 
 * Firefox
