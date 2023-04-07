@@ -13,7 +13,7 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_mac64.zip)
     * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_win32.zip)
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
-  to [111.0.1661.62](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/111.0.1661.62))
+  to [112.0.1722.34](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/112.0.1722.34))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_mac64.zip)
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/111.0.1661.62/edgedriver_win64.zip)
