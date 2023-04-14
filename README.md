@@ -13,11 +13,11 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_mac64.zip)
     * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_win32.zip)
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
-  to [112.0.1722.34](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/112.0.1722.34))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_mac64.zip)
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_win64.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_win32.zip)
+  to [112.0.1722.46](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/112.0.1722.46))
+    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_linux64.zip)
+    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_mac64.zip)
+    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_win32.zip)
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
   to [v0.33.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.33.0))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
@@ -95,13 +95,13 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/LATEST_STABLE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_linux64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_mac64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_mac64.zip'
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_win64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.39/edgedriver_win32.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.46/edgedriver_win32.zip'
 ```
 
 * IE
