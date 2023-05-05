@@ -16,8 +16,8 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
   to [112.0.1722.68](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/112.0.1722.68))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_mac64.zip)
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_win64.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_win32.zip)
+    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.71/edgedriver_win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.71/edgedriver_win32.zip)
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
   to [v0.33.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.33.0))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
@@ -99,9 +99,9 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/11
 # download for macos
 wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_mac64.zip'
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_win64.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.71/edgedriver_win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.68/edgedriver_win32.zip'
+wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.71/edgedriver_win32.zip'
 ```
 
 * IE
