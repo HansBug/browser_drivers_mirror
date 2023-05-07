@@ -35,7 +35,7 @@ def cli():
     pass  # pragma: no cover
 
 
-_UNKNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera', 'ie']
+_KNOWN_BROWSERS = ['google', 'firefox', 'edge', 'opera', 'ie']
 
 
 def _get_envs_of_release_urls():
@@ -44,7 +44,7 @@ def _get_envs_of_release_urls():
     for os_ in ['linux', 'darwin', 'win32']:
         for bits in [32, 64]:
             for is_arch in [True, False]:
-                for browser_name in _UNKNOWN_BROWSERS:
+                for browser_name in _KNOWN_BROWSERS:
                     if browser_name == 'ie' and os_ != 'win32':
                         continue
                     if os_ != 'win32' and bits == 32:
@@ -74,7 +74,7 @@ def _get_envs_of_release_urls():
 
 def _get_envs_of_versions():
     envs = {}
-    for browser in tqdm(_UNKNOWN_BROWSERS):
+    for browser in tqdm(_KNOWN_BROWSERS):
         envs[f'{browser.upper()}_LATEST_RELEASE'] = _get_latest_release_version(browser)
     return envs
 
