@@ -7,7 +7,7 @@ from hfmirror.sync import SyncTask
 from huggingface_hub import HfApi
 
 from .source import IEResource
-from ..utils import GLOBAL_CONTEXT_SETTINGS
+from ..utils import GLOBAL_CONTEXT_SETTINGS, register_for_hf
 from ..utils import print_version as _origin_print_version
 
 print_version = partial(_origin_print_version, 'mirror.ie')
@@ -30,6 +30,7 @@ def cli():
 def trans(repo: str, namespace: str):
     src = IEResource()
 
+    register_for_hf()
     api = HfApi(token=os.environ['HF_TOKEN'])
     api.create_repo(repo, repo_type='dataset', exist_ok=True)
     storage = HuggingfaceStorage(repo=repo, hf_client=api, namespace=namespace)
