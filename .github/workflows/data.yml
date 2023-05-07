@@ -22,11 +22,11 @@ jobs:
         python-version:
           - '3.8'
         browser:
-          - 'edge'
+          - 'firefox'
           - 'google'
           - 'ie'
           - 'opera'
-          - 'firefox'
+          - 'edge'
 
     steps:
       - name: Get system version for Linux
