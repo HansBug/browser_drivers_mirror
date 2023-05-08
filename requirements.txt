@@ -5,4 +5,4 @@ PyGithub
 huggingface_hub
 hbutils>=0.9.0
 hf-webdriver-manager>=0.1.0
-hfmirror>=0.0.3
+git+https://github.com/narugo1992/hfmirror.git@main
