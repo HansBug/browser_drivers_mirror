@@ -2,7 +2,7 @@ import os.path
 from functools import partial
 
 import click
-from hfmirror.storage import HuggingfaceStorage
+from hfmirror.storage import HuggingfaceStorage, LocalStorage
 from hfmirror.sync import SyncTask
 from huggingface_hub import HfApi
 
@@ -35,6 +35,20 @@ def trans(repo: str, namespace: str):
     api.create_repo(repo, repo_type='dataset', exist_ok=True)
     storage = HuggingfaceStorage(repo=repo, hf_client=api, namespace=namespace)
 
+    task = SyncTask(src, storage)
+    task.sync()
+
+
+@cli.command('download', help='Download file to local directory',
+             context_settings={**GLOBAL_CONTEXT_SETTINGS})
+@click.option('--output', '-O', 'output_dir', type=str, required=True,
+              help='Directory to download to.', show_default=True)
+@click.option('--namespace', '-n', 'namespace', type=str, default='opera',
+              help="Namespace to upload.", show_default=True)
+def download(output_dir: str, namespace: str):
+    os.makedirs(output_dir, exist_ok=True)
+    src = OperaResource()
+    storage = LocalStorage(output_dir, namespace)
     task = SyncTask(src, storage)
     task.sync()
 
