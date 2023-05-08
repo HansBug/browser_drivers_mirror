@@ -19,12 +19,13 @@ print_version = partial(_origin_print_version, 'mirror')
 
 
 def _get_latest_release_version(b) -> str:
-    if b == 'edge':
-        resp = requests.get(hf_hub_url(repo_id='HansBug/browser_drivers_mirror', filename=f'{b}/LATEST_STABLE'))
-        return resp.text.strip()
-    else:
-        resp = requests.get(hf_hub_url(repo_id='HansBug/browser_drivers_mirror', filename=f'{b}/LATEST_RELEASE'))
-        return resp.text.strip()
+    resp = requests.get(hf_hub_url(
+        repo_id='HansBug/browser_drivers_mirror',
+        filename=f'{b}/LATEST_STABLE' if b == 'edge' else f'{b}/LATEST_RELEASE',
+        repo_type='dataset',
+    ))
+    resp.raise_for_status()
+    return resp.text.strip()
 
 
 @click.group(context_settings={**GLOBAL_CONTEXT_SETTINGS}, help='Global Utils')
@@ -125,7 +126,7 @@ def readme(template_filename: str, output: str, is_huggingface: bool, scheme_tem
 @click.option('--remote', '-R', 'remote_filename', type=str, default='README.md',
               help='README.md file in repository.', show_default=True)
 def hf_readme(readme_filename: str, repo: str, remote_filename: str):
-    resp = requests.get(hf_hub_url(repo_id=repo, filename=remote_filename))
+    resp = requests.get(hf_hub_url(repo_id=repo, filename=remote_filename, repo_type='dataset'))
     resp.raise_for_status()
 
     remote_readme_text = resp.text
@@ -136,7 +137,7 @@ def hf_readme(readme_filename: str, repo: str, remote_filename: str):
             path_or_fileobj=readme_filename,
             path_in_repo=remote_filename,
             repo_id=repo,
-            repo_type='model',
+            repo_type='dataset',
         )
 
 
