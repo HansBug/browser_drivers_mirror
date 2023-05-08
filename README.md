@@ -8,31 +8,31 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 ## Supported Browsers
 
 * [Google Chrome](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google) (up
-  to [113.0.5672.63](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/113.0.5672.63))
+  to [Invalid username or password.](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/Invalid username or password.))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip)
     * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip)
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
-  to [113.0.1774.35](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/113.0.1774.35))
+  to [Invalid username or password.](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/Invalid username or password.))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_mac64.zip)
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win64.zip)
     * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win32.zip)
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
-  to [v0.33.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.33.0))
+  to [Invalid username or password.](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/Invalid username or password.))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz)
     * [macOS (arch) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz)
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip)
     * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip)
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
-  to [v.112.0.5615.87](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/v.112.0.5615.87))
+  to [Invalid username or password.](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/Invalid username or password.))
     * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip)
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip)
     * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip)
 * [IE (not recommended)](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie) (up
-  to [selenium-4.8.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.8.0))
+  to [Invalid username or password.](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/Invalid username or password.))
     * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip)
     * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip)
 
