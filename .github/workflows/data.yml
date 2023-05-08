@@ -22,9 +22,9 @@ jobs:
         python-version:
           - '3.8'
         browser:
+          - 'ie'
           - 'firefox'
           - 'google'
-          - 'ie'
           - 'opera'
           - 'edge'
 
