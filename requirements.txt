@@ -4,5 +4,5 @@ tqdm
 PyGithub
 huggingface_hub
 hbutils>=0.9.0
-hf-webdriver-manager>=0.1.0
+hf-webdriver-manager>=0.2.0
 hfmirror>=0.0.5
