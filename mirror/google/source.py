@@ -52,4 +52,5 @@ class ChromeResource(SyncResource):
             file_url_name = item['Key']
             url = f'{GOOGLE_DRIVE_ROOT}/{file_url_name}'
             relpath = os.sep.join(file_url_name.split('/'))
-            yield 'strip', url, relpath, {}
+            if relpath[-1] != 'index.html':
+                yield 'strip', url, relpath, {}
