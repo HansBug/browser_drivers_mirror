@@ -7,6 +7,7 @@ from hfmirror.sync import SyncTask
 from huggingface_hub import HfApi
 
 from .source import OperaResource
+from ..config import DEFAULT_TARGET_REPO, DEFAULT_REPO_TYPE
 from ..utils import GLOBAL_CONTEXT_SETTINGS, register_for_hf
 from ..utils import print_version as _origin_print_version
 
@@ -23,7 +24,7 @@ def cli():
 
 @cli.command('trans', help="Transport files to huggingface",
              context_settings={**GLOBAL_CONTEXT_SETTINGS})
-@click.option('--repo', '-r', 'repo', type=str, default='HansBug/browser_drivers_mirror',
+@click.option('--repo', '-r', 'repo', type=str, default=DEFAULT_TARGET_REPO,
               help='Repository to upload.', show_default=True)
 @click.option('--namespace', '-n', 'namespace', type=str, default='opera',
               help="Namespace to upload.", show_default=True)
@@ -32,7 +33,7 @@ def trans(repo: str, namespace: str):
 
     register_for_hf()
     api = HfApi(token=os.environ['HF_TOKEN'])
-    api.create_repo(repo, repo_type='dataset', exist_ok=True)
+    api.create_repo(repo, repo_type=DEFAULT_REPO_TYPE, exist_ok=True)
     storage = HuggingfaceStorage(repo=repo, hf_client=api, namespace=namespace)
 
     task = SyncTask(src, storage)

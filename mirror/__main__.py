@@ -12,18 +12,23 @@ from tqdm.auto import tqdm
 from webdriver_manager.core.utils import os_type
 from webdriver_manager.dispatch import get_browser_manager
 
-from .utils import GLOBAL_CONTEXT_SETTINGS, get_huggingface_client
+from .config import DEFAULT_TARGET_REPO, DEFAULT_REPO_TYPE
+from .utils import GLOBAL_CONTEXT_SETTINGS, get_huggingface_client, hf_hub_tree_url
 from .utils import print_version as _origin_print_version
 
 print_version = partial(_origin_print_version, 'mirror')
 
 
-def _get_latest_release_version(b) -> str:
-    resp = requests.get(hf_hub_url(
-        repo_id='HansBug/browser_drivers_mirror',
+def _get_latest_release_url(b) -> str:
+    return hf_hub_url(
+        repo_id=DEFAULT_TARGET_REPO,
         filename=f'{b}/LATEST_STABLE' if b == 'edge' else f'{b}/LATEST_RELEASE',
-        repo_type='dataset',
-    ))
+        repo_type=DEFAULT_REPO_TYPE,
+    )
+
+
+def _get_latest_release_version(b) -> str:
+    resp = requests.get(_get_latest_release_url(b))
     resp.raise_for_status()
     return resp.text.strip()
 
@@ -75,8 +80,21 @@ def _get_envs_of_release_urls():
 
 def _get_envs_of_versions():
     envs = {}
+    envs['REPO_DIR'] = hf_hub_tree_url(repo_id=DEFAULT_TARGET_REPO, filename='', repo_type=DEFAULT_REPO_TYPE)
     for browser in tqdm(_KNOWN_BROWSERS):
-        envs[f'{browser.upper()}_LATEST_RELEASE'] = _get_latest_release_version(browser)
+        version = _get_latest_release_version(browser)
+        envs[f'{browser.upper()}_LATEST_RELEASE'] = version
+        envs[f'{browser.upper()}_LATEST_RELEASE_URL'] = _get_latest_release_url(browser)
+        envs[f'{browser.upper()}_LATEST_RELEASE_DIR'] = hf_hub_tree_url(
+            repo_id=DEFAULT_TARGET_REPO,
+            filename=f'{browser}/{version}',
+            repo_type=DEFAULT_REPO_TYPE,
+        )
+        envs[f'{browser.upper()}_DIR'] = hf_hub_tree_url(
+            repo_id=DEFAULT_TARGET_REPO,
+            filename=browser,
+            repo_type=DEFAULT_REPO_TYPE,
+        )
     return envs
 
 
@@ -121,12 +139,12 @@ def readme(template_filename: str, output: str, is_huggingface: bool, scheme_tem
              context_settings={**GLOBAL_CONTEXT_SETTINGS})
 @click.option('--input', '-i', 'readme_filename', type=click.Path(exists=True, file_okay=True, readable=True),
               required=True, help='README.md file to upload.', show_default=True)
-@click.option('--repo', '-r', 'repo', type=str, default='HansBug/browser_drivers_mirror',
+@click.option('--repo', '-r', 'repo', type=str, default=DEFAULT_TARGET_REPO,
               help='Repository to upload.', show_default=True)
 @click.option('--remote', '-R', 'remote_filename', type=str, default='README.md',
               help='README.md file in repository.', show_default=True)
 def hf_readme(readme_filename: str, repo: str, remote_filename: str):
-    resp = requests.get(hf_hub_url(repo_id=repo, filename=remote_filename, repo_type='dataset'))
+    resp = requests.get(hf_hub_url(repo_id=repo, filename=remote_filename, repo_type=DEFAULT_REPO_TYPE))
     resp.raise_for_status()
 
     remote_readme_text = resp.text
@@ -137,7 +155,7 @@ def hf_readme(readme_filename: str, repo: str, remote_filename: str):
             path_or_fileobj=readme_filename,
             path_in_repo=remote_filename,
             repo_id=repo,
-            repo_type='dataset',
+            repo_type=DEFAULT_REPO_TYPE,
         )
 
 
