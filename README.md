@@ -9,32 +9,32 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 
 * [Google Chrome](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google) (up
   to [113.0.5672.63](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/google/113.0.5672.63))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip)
-    * [Windows Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip)
+    * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_linux64.zip)
+    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip)
+    * [Windows Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip)
 * [Microsoft Edge](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge) (up
   to [113.0.1774.35](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/edge/113.0.1774.35))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_mac64.zip)
-    * [Windows (64bit) Driver]()
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win32.zip)
+    * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip)
+    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_mac64.zip)
+    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win32.zip)
 * [Mozilla Firefox](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox) (up
   to [v0.33.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/firefox/v0.33.0))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz)
-    * [macOS (arch) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz)
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip)
+    * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz)
+    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz)
+    * [macOS (arch) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz)
+    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip)
 * [Opera](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera) (up
   to [v.112.0.5615.87](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/opera/v.112.0.5615.87))
-    * [Linux Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip)
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip)
+    * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_linux64.zip)
+    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip)
+    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip)
 * [IE (not recommended)](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie) (up
-  to [selenium-4.9.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.9.0))
-    * [Windows (64bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip)
+  to [selenium-4.8.0](https://huggingface.co/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.8.0))
+    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip)
 
 ## How to use
 
@@ -47,11 +47,11 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/HansBu
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/LATEST_RELEASE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_linux64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/112.0.5615.49/chromedriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip'
 # download for windows
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip'
 ```
 
 * Firefox
@@ -61,15 +61,15 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/google/
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/LATEST_RELEASE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos.tar.gz'
 # download for macos (arch)
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-macos-aarch64.tar.gz'
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/firefox/v0.33.0/geckodriver-v0.33.0-win32.zip'
 ```
 
 * Opera
@@ -79,13 +79,13 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/firefox
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/LATEST_RELEASE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_linux64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip'
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip'
 ```
 
 * Edge
@@ -95,13 +95,13 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/opera/v
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/LATEST_STABLE'
 
 # download for linux
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/112.0.1722.64/edgedriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_mac64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_mac64.zip'
 # download for win64
-wget ''
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win64.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win32.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.35/edgedriver_win32.zip'
 ```
 
 * IE
@@ -111,9 +111,9 @@ wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/edge/11
 wget -qO- 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/LATEST_RELEASE'
 
 # download for win64
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip'
 # download for win32
-wget 'https://huggingface.co/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip'
 ```
 
 ### With [hf-webdriver-manager](https://github.com/HansBug/hf_webdriver_manager)
