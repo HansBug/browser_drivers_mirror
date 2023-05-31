@@ -7,10 +7,10 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/datase
 
 ## Supported Browsers
 
-* [Google Chrome](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/google) (up to [113.0.5672.63](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/google/113.0.5672.63))
+* [Google Chrome](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/google) (up to [114.0.5735.90](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/google/114.0.5735.90))
     * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_linux64.zip)
-    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip)
-    * [Windows Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip)
+    * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/114.0.5735.90/chromedriver_mac64.zip)
+    * [Windows Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/114.0.5735.90/chromedriver_win32.zip)
 * [Microsoft Edge](${EDGE_DIR) (up to [113.0.1774.57](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/edge/113.0.1774.57))
     * [Linux Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.57/edgedriver_linux64.zip)
     * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/edge/113.0.1774.57/edgedriver_mac64.zip)
@@ -44,9 +44,9 @@ wget -qO- 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolv
 # download for linux
 wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_linux64.zip'
 # download for macos
-wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_mac64.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/114.0.5735.90/chromedriver_mac64.zip'
 # download for windows
-wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/113.0.5672.63/chromedriver_win32.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/google/114.0.5735.90/chromedriver_win32.zip'
 
 ```
 
