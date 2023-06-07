@@ -27,9 +27,9 @@ on [HansBug/browser_drivers_mirror on huggingface](https://huggingface.co/datase
     * [macOS Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_mac64.zip)
     * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win64.zip)
     * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/opera/v.112.0.5615.87/operadriver_win32.zip)
-* [IE (not recommended)](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/ie) (up to [selenium-4.8.0](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.8.0))
-    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip)
-    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip)
+* [IE (not recommended)](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/ie) (up to [selenium-4.10.0](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/tree/main/ie/selenium-4.10.0))
+    * [Windows (64bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.10.0/IEDriverServer_x64_4.10.0.zip)
+    * [Windows (32bit) Driver](https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.10.0/IEDriverServer_Win32_4.10.0.zip)
 
 ## How to use
 
@@ -110,9 +110,9 @@ wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/mai
 wget -qO- 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/LATEST_RELEASE'
 
 # download for win64
-wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_x64_4.8.0.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.10.0/IEDriverServer_x64_4.10.0.zip'
 # download for win32
-wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.8.0/IEDriverServer_Win32_4.8.0.zip'
+wget 'https://huggingface.co/datasets/HansBug/browser_drivers_mirror/resolve/main/ie/selenium-4.10.0/IEDriverServer_Win32_4.10.0.zip'
 
 ```
 
